@@ -1,0 +1,510 @@
+.collection-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.collection-stat-card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-areas:
+    "icon label"
+    "icon value";
+  align-items: center;
+  gap: 4px 12px;
+  min-height: 104px;
+  padding: 18px;
+}
+
+.collection-stat-card svg {
+  grid-area: icon;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.collection-stat-card span {
+  grid-area: label;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.collection-stat-card strong {
+  grid-area: value;
+  color: #0f766e;
+  font-size: 26px;
+}
+
+.collection-stat-card.alert svg {
+  background: #fff7ed;
+  color: #d97706;
+}
+
+.collection-stat-card.profit svg {
+  background: #ecfdf5;
+  color: #0f766e;
+}
+
+.collection-stat-card.alert strong {
+  color: #dc2626;
+}
+
+.collection-filter-strip {
+  margin-top: -4px;
+}
+
+.collection-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.75fr);
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: start;
+}
+
+.collection-form-card,
+.collection-table-card,
+.history-card {
+  padding: 20px;
+}
+
+.collection-form-title,
+.collection-table-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.table-head-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.collection-form-title h2,
+.collection-table-head h2,
+.history-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.collection-form-title p,
+.collection-table-head p {
+  margin: 4px 0 0;
+  color: #64748b;
+}
+
+.collection-form-title button,
+.collection-table-head button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: #e2e8f0;
+  color: #334155;
+  cursor: pointer;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.collection-table-head button {
+  background: #ecfdf5;
+  color: #0f766e;
+}
+
+.product-preview-row {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.product-preview-row img {
+  width: 86px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-preview-row span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.product-preview-row strong,
+.product-preview-row p {
+  display: block;
+  margin: 3px 0 0;
+}
+
+.product-preview-row p {
+  color: #64748b;
+}
+
+.collection-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.collection-form-card label,
+.stock-control label {
+  display: block;
+  margin-bottom: 12px;
+  color: #334155;
+  font-weight: 800;
+}
+
+.collection-form-card input,
+.collection-form-card select,
+.collection-form-card textarea,
+.stock-control input,
+.stock-control select {
+  margin-top: 7px;
+}
+
+.collection-primary-btn,
+.stock-control button {
+  width: 100%;
+  min-height: 46px;
+  padding: 13px;
+}
+
+.stock-control button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.low-stock-box {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff7f7;
+}
+
+.low-stock-box h3 {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 16px;
+}
+
+.low-stock-box p {
+  margin: 6px 0 0;
+  color: #7f1d1d;
+}
+
+.low-stock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.low-stock-list span {
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #7f1d1d;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.inventory-mini {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.inventory-mini > div {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.inventory-mini svg {
+  width: 38px;
+  height: 38px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.inventory-mini span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.inventory-mini strong {
+  color: #111827;
+  font-size: 17px;
+}
+
+.collection-table-wrap {
+  overflow-x: auto;
+}
+
+.collection-table-card table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: collapse;
+}
+
+.collection-table-card th,
+.collection-table-card td {
+  padding: 12px;
+  border-bottom: 1px solid #eef2f7;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.collection-table-card th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+}
+
+.collection-table-card tbody tr:hover {
+  background: #fbfdff;
+}
+
+.stock-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.stock-status {
+  display: inline-block;
+  min-width: 86px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.stock-status.normal {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stock-status.low-stock {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.stock-status.out-of-stock {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.stock-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-action-btn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+}
+
+.table-action-btn.edit {
+  background: #d97706;
+}
+
+.table-action-btn.delete {
+  background: #dc2626;
+}
+
+.history-card {
+  margin-top: 18px;
+}
+
+.history-list {
+  display: grid;
+  gap: 6px;
+}
+
+.stock-row {
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.stock-row strong,
+.stock-row span {
+  display: block;
+}
+
+.stock-row span {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.stock-row b {
+  flex: 0 0 auto;
+}
+
+.stock-row .plus {
+  color: #16a34a;
+}
+
+.stock-row .minus {
+  color: #dc2626;
+}
+
+@media (max-width: 1180px) {
+  .collection-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .collection-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .collection-stats,
+  .collection-layout,
+  .collection-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-form-title,
+  .collection-table-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .table-head-actions,
+  .table-head-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .collection-table-wrap {
+    overflow: visible;
+  }
+
+  .collection-table-card table,
+  .collection-table-card thead,
+  .collection-table-card tbody,
+  .collection-table-card tr,
+  .collection-table-card th,
+  .collection-table-card td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .collection-table-card table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+  }
+
+  .collection-table-card thead {
+    display: none;
+  }
+
+  .collection-table-card tr {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+
+  .collection-table-card td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 46px;
+    padding: 10px 12px;
+    text-align: right;
+  }
+
+  .collection-table-card td::before {
+    content: attr(data-label);
+    color: #64748b;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  .collection-table-card td:first-child {
+    justify-content: center;
+    background: #f8fafc;
+  }
+
+  .collection-table-card td:first-child::before {
+    display: none;
+  }
+
+  .stock-thumb {
+    width: 100%;
+    height: 150px;
+  }
+
+  .collection-stat-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    min-height: 90px;
+    padding: 14px;
+  }
+
+  .collection-stat-card svg {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+  }
+
+  .collection-form-card,
+  .collection-table-card,
+  .history-card {
+    padding: 14px;
+  }
+
+  .product-preview-row {
+    grid-template-columns: 1fr;
+  }
+
+  .product-preview-row img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .stock-row {
+    align-items: flex-start;
+  }
+}

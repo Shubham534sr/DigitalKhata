@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+
+/* =========================
+   Light Theme (Default)
+========================= */
+
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --sidebar: #0f172a;
+  --border: #e2e8f0;
+}
+
+/* =========================
+   Dark Theme
+========================= */
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --sidebar: #020617;
+  --border: #334155;
+}
+
+/* =========================
+   Eye Protection Theme
+========================= */
+
+[data-theme="eye"] {
+  --bg: #f7f3dd;
+  --card: #fffbea;
+  --text: #4b3f00;
+  --sidebar: #d6cfa4;
+  --border: #c8b978;
+}
+
+/* =========================
+   Global
+========================= */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: all .3s ease;
+}
+
+
+/* theam */
+:root{
+
+--bg:#f7fbff;
+--card:#ffffff;
+--text:#1e293b;
+--text2:#64748b;
+--border:#e4edf7;
+--sidebar:#ffffff;
+--topbar:#ffffff;
+--hover:#f1f7ff;
+--active:#eaf4ff;
+
+}
+
+[data-theme="dark"]{
+
+--bg:#0f172a;
+--card:#1e293b;
+--text:#f8fafc;
+--text2:#cbd5e1;
+--border:#334155;
+--sidebar:#111827;
+--topbar:#111827;
+--hover:#1e293b;
+--active:#2563eb;
+
+}
+
+[data-theme="eye"]{
+
+--bg:#f8f5e6;
+--card:#fffdf3;
+--text:#433b16;
+--text2:#7c6f37;
+--border:#d8cfa3;
+--sidebar:#efe7c5;
+--topbar:#fff8dd;
+--hover:#f6efca;
+--active:#d9c45a;
+
+}

@@ -1,0 +1,12 @@
+node_modules/
+.env
+backend/.env
+frontend/.env
+
+*.xlsx
+*.xls
+*.csv
+*.tmp
+
+Smart_Khata_Google_Sheets_CSV_Import/
+PROJECT_MANAGEMENT_GOOGLE_SHEETS.tsv.md

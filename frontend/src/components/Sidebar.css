@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+.app-layout {
+  min-height: 100vh;
+  background:var(--bg);
+}
+
+.app-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 40;
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 14px;
+  background: #ffffff;
+  border-right:1px solid var(--border);
+  box-shadow: 12px 0 30px rgba(30, 64, 175, 0.06);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 18px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #60a5fa, #5eead4);
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.sidebar-brand p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 6px;
+  padding: 18px 0;
+}
+
+.nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-link:hover {
+  background:var(--hover);  color: #2563eb;
+  transform: translateX(2px);
+}
+
+.nav-link.active {
+  background:var(--active);
+  color: #2563eb;
+  box-shadow: inset 3px 0 0 #60a5fa;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf2f7;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f8fbff;
+  border: 1px solid #e4edf7;
+  border-radius: 8px;
+}
+
+.sidebar-user span,
+.topbar-profile span {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-weight: 900;
+}
+
+.sidebar-user strong,
+.topbar-profile strong {
+  display: block;
+  max-width: 150px;
+  overflow: hidden;
+  color: #1e293b;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-user p,
+.topbar-profile p {
+  max-width: 150px;
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 10px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff7f7;
+  color: #dc2626;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.layout-main {
+  min-height: 100vh;
+  margin-left: 264px;
+}
+
+.layout-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e4edf7;
+  backdrop-filter: blur(14px);
+}
+
+.layout-topbar h1 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.layout-topbar p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout-content {
+  min-width: 0;
+}
+
+.mobile-menu-btn,
+.mobile-close-btn,
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .app-sidebar {
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .layout-main {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    display: block;
+    border: 0;
+    background: rgba(15, 23, 42, 0.24);
+  }
+
+  .layout-topbar {
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-sidebar {
+    width: min(86vw, 300px);
+  }
+
+  .layout-topbar {
+    align-items: center;
+  }
+
+  .layout-topbar h1 {
+    font-size: 17px;
+  }
+
+  .layout-topbar p {
+    display: none;
+  }
+
+  .topbar-profile div {
+    display: none;
+  }
+}
