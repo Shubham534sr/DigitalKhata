@@ -62,10 +62,6 @@ npm install
 npm run dev
 ```
 
-## 📸 Screenshots
-
-(Add project screenshots here)
-
 ## 👨‍💻 Developer
 
 **Shubham Rathod**
